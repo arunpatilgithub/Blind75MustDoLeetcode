@@ -1,5 +1,8 @@
 import java.util.Stack;
 
+/**
+ * <a href="https://leetcode.com/problems/valid-parentheses/">LC20. Valid Parentheses</a>
+ */
 public class ValidParenthesesLC20 {
     public static void main(String[] args) {
         //String s = "()[]{}";
