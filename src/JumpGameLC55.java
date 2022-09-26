@@ -7,8 +7,8 @@ public class JumpGameLC55 {
     public static void main(String[] args) {
 
         //int[] nums = {2,3,1,1,4};
-        //int[] nums = {3,2,1,0,4};
-        int[] nums = {0};
+        int[] nums = {3,2,1,0,4};
+        //int[] nums = {0};
 
         System.out.println(canJump(nums));
     }
