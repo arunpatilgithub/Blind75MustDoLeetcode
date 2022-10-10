@@ -1,7 +1,7 @@
 import java.util.HashMap;
 
 /**
- * <a href="https://leetcode.com/problems/minimum-window-substring/">Lhttps://leetcode.com/problems/minimum-window-substring/</a>
+ * <a href="https://leetcode.com/problems/minimum-window-substring/">76. Minimum Window Substring</a>
  */
 public class MinimumWindowSubstring76 {
 
