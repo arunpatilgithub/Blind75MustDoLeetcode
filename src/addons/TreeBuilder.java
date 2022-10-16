@@ -5,10 +5,7 @@ import java.util.Queue;
 
 public class TreeBuilder {
 
-    public static void main(String[] args) {
-
-        //Integer[] root = {2, 1, 3};
-        Integer[] root = {5, 1, 4, null, null, 3, 6};
+    public static TreeNode build(Integer[] root) {
 
         Queue<TreeNode> queue = new LinkedList<>();
 
@@ -20,7 +17,11 @@ public class TreeBuilder {
             TreeNode existingNode = queue.remove();
 
             Integer left = root[++i];
-            Integer right = root[++i];
+            Integer right = null;
+            
+            if (i < root.length - 1) {
+                right = root[++i];
+            }
 
 
             if (left != null) {
@@ -40,9 +41,7 @@ public class TreeBuilder {
             }
 
         }
-
-        System.out.println(rootNode);
-
+        return rootNode;
 
     }
 

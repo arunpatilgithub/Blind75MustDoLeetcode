@@ -1,7 +1,5 @@
+import addons.TreeBuilder;
 import addons.TreeNode;
-
-import java.util.LinkedList;
-import java.util.Queue;
 
 /**
  * <a href="https://leetcode.com/problems/validate-binary-search-tree/">98. Validate Binary Search Tree</a>
@@ -15,35 +13,8 @@ public class ValidateBinarySearchTree98 {
         //Integer[] root = {5, 4, 6, null, null, 3, 7};
         //Integer[] root = {2147483647};
 
-        Queue<TreeNode> queue = new LinkedList<>();
-        TreeNode rootNode = new TreeNode(root[0]);
+        TreeNode rootNode = TreeBuilder.build(root);
 
-        int i = 0;
-        queue.add(rootNode);
-        while (i < root.length - 1) {
-            TreeNode existingNode = queue.remove();
-
-            Integer left = root[++i];
-            Integer right = root[++i];
-
-
-            if (left != null) {
-                TreeNode leftNode = new TreeNode(left);
-                queue.add(leftNode);
-                existingNode.left = leftNode;
-            } else {
-                existingNode.left = null;
-            }
-
-            if (right != null) {
-                TreeNode rightNode = new TreeNode(right);
-                queue.add(rightNode);
-                existingNode.right = rightNode;
-            } else {
-                existingNode.right = null;
-            }
-
-        }
 
         System.out.println(isValidBST(rootNode));
 
