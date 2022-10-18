@@ -7,6 +7,9 @@ public class TreeBuilder {
 
     public static TreeNode build(Integer[] root) {
 
+        if (root.length == 0) {
+            return null;
+        }
         Queue<TreeNode> queue = new LinkedList<>();
 
         TreeNode rootNode = new TreeNode(root[0]);
