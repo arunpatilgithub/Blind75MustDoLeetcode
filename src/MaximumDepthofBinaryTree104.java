@@ -36,8 +36,8 @@ public class MaximumDepthofBinaryTree104 {
         }
 
         Queue<TreeNode> queue = new LinkedList<>();
-
         queue.add(root);
+
         int depth = 0;
         while (!queue.isEmpty()) {
 
